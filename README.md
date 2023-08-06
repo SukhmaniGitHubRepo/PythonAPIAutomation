@@ -40,7 +40,7 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 - allure commandline npm
 - npm i -g allure-commandline
 - allure (To verify it's properly installed)
-- Add Allure to system path (C:\Users\Sukhmani\AppData\Roaming\npm\node_modules\allure-commandline\bin)
+- Add Allure to system path by Editing the system environment variables (C:\Users\Sukhmani\AppData\Roaming\npm\node_modules\allure-commandline\bin)
 
 # [Optional] Run Powershell in administrator mode and run below commands to check the allure status?
 - Enter allure and hit enter
@@ -64,5 +64,10 @@ URL - https://restful-booker.herokuapp.com/apidoc/index.html
 - `allure serve ./reports` (Run only in System CMD)
 
 
-## How to Run via Jenkins? 
-1. 
+## How to Run via Jenkins?
+-->Build Steps:
+cd C:\Users\Sukhmani\.jenkins\workspace\RunPythonAPIAutomationTestScriptsFromGitHub
+# python --version
+# Install
+pip install -r requirements.txt
+pytest .\tests\intergration_tests\test_create_booking.py -s -v --html=report.html --alluredir=./reports
